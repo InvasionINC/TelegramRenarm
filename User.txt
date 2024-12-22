@@ -1,27 +1,29 @@
-package your.package.name
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
-import kotlinx.android.synthetic.main.activity_main.*
-import android.content.Intent
-
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val btnLogin = findViewById<Button>(R.id.btn_login)
-        val btnRegister = findViewById<Button>(R.id.btn_register)
-
-        btnLogin.setOnClickListener {
-            // Код для перехода на страницу входа
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-
-        btnRegister.setOnClickListener {
-            // Код для перехода на страницу регистрации
-            startActivity(Intent(this, RegisterActivity::class.java))
-        }
-    }
-}
+OTHER: Using Kotlin home directory
+dist/
+kotlinc
+OTHER: Scripting plugin will not be
+loaded: not all required jars are present
+in the classpath (missing files: [./
+kotlin-scripting-compiler.jar, .
+kotlin-scripting-compiler-impl.jar,
+./
+kotlinx-coroutines-core-jvm.jar, ./
+kotlin-scripting-common.jar,
+kotlin-scripting-jvm.jar, ./
+kotlin-scripting-js.jar, .
+js.engines.jar])
+OTHER: Using JVM IR backend
+OTHER: Configuring the compilation
+environment
+ERROR: Unresolved reference: kotlinx
+[MainActivity.kt:6]
+ERROR: Unresolved reference: btn_login
+[MainActivity.kt:14]
+ERROR: Unresolved reference: btn_register
+[MainActivity.kt:15]
+ERROR: Unresolved reference: LoginActivity
+[MainActivity.kt:19]
+ERROR: Unresolved reference:
+RegisterActivity [MainActivity.kt:24]
+ERROR: Compilation failed, see logs for
+more details
