@@ -1,42 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:background="@color/black">
-
-    <!-- Овальная картинка -->
-    <ImageView
-        android:id="@+id/logo_image"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/your_logo_png"/>
-
-    <!-- Кнопки -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="64dp">
-        
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/yellow"
-            android:text="Войти"
-            android:layout_marginEnd="16dp"/>
-        
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/yellow"
-            android:text="Зарегистрироваться"/>
-    </LinearLayout>
-</LinearLayout>
+ERROR: Unresolved reference:
+AppCompatActivity [MainActivity.kt:1]
+ERROR: 'onCreate' overrides nothing
+[MainActivity.kt:2]
+ERROR: Unresolved reference: Bundle
+[MainActivity.kt:2]
+ERROR: Unresolved reference: onCreate
+[MainActivity.kt:3]
+ERROR: Unresolved reference:
+setContentView [MainActivity.kt:4]
+ERROR: Unresolved reference: R
+[MainActivity.kt:4]
+ERROR: Unresolved reference: findViewById
+[MainActivity.kt:5]
+ERROR: Unresolved reference: Button
+[MainActivity.kt:5]
+ERROR: Unresolved reference: R
+[MainActivity.kt:5]
+ERROR: Unresolved reference: findViewById
+[MainActivity.kt:6]
+ERROR: Unresolved reference: Button
+[MainActivity.kt:6]
+ERROR: Unresolved reference: R
+[MainActivity.kt:6]
+ERROR: Unresolved reference: startActivity
+[MainActivity.kt:9]
+ERROR: Unresolved reference: Intent
+[MainActivity.kt:9]
+ERROR: Unresolved reference: LoginActivity
+[MainActivity.kt:9]
