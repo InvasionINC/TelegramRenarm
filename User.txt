@@ -1,30 +1,27 @@
-ERROR: Unresolved reference:
-AppCompatActivity [MainActivity.kt:1]
-ERROR: 'onCreate' overrides nothing
-[MainActivity.kt:2]
-ERROR: Unresolved reference: Bundle
-[MainActivity.kt:2]
-ERROR: Unresolved reference: onCreate
-[MainActivity.kt:3]
-ERROR: Unresolved reference:
-setContentView [MainActivity.kt:4]
-ERROR: Unresolved reference: R
-[MainActivity.kt:4]
-ERROR: Unresolved reference: findViewById
-[MainActivity.kt:5]
-ERROR: Unresolved reference: Button
-[MainActivity.kt:5]
-ERROR: Unresolved reference: R
-[MainActivity.kt:5]
-ERROR: Unresolved reference: findViewById
-[MainActivity.kt:6]
-ERROR: Unresolved reference: Button
-[MainActivity.kt:6]
-ERROR: Unresolved reference: R
-[MainActivity.kt:6]
-ERROR: Unresolved reference: startActivity
-[MainActivity.kt:9]
-ERROR: Unresolved reference: Intent
-[MainActivity.kt:9]
-ERROR: Unresolved reference: LoginActivity
-[MainActivity.kt:9]
+package your.package.name
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Intent
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val btnLogin = findViewById<Button>(R.id.btn_login)
+        val btnRegister = findViewById<Button>(R.id.btn_register)
+
+        btnLogin.setOnClickListener {
+            // Код для перехода на страницу входа
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+        btnRegister.setOnClickListener {
+            // Код для перехода на страницу регистрации
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
+    }
+}
