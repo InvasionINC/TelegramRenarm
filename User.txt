@@ -1,19 +1,42 @@
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/black">
 
-        val btnLogin = findViewById<Button>(R.id.btn_login)
-        val btnRegister = findViewById<Button>(R.id.btn_register)
+    <!-- Овальная картинка -->
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/your_logo_png"/>
 
-        btnLogin.setOnClickListener {
-            // Код для перехода на страницу входа
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-
-        btnRegister.setOnClickListener {
-            // Код для перехода на страницу регистрации
-            startActivity(Intent(this, RegisterActivity::class.java))
-        }
-    }
-}
+    <!-- Кнопки -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="64dp">
+        
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:text="Войти"
+            android:layout_marginEnd="16dp"/>
+        
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:text="Зарегистрироваться"/>
+    </LinearLayout>
+</LinearLayout>
